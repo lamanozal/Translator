@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    <link rel="stylesheet" href="snackbar.css">
+    <link rel="stylesheet" href="spinner.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+
+<div class="container">
+    <div class="box">
+        <div class="controls">
+            <div class="from-lang">
+                <div class="icons">
+                    <i id="from-volume" class="fa-solid fa-volume-high"></i>
+                    <i id="from-copy" class="fa-solid fa-copy"></i>
+                </div>
+                <select id="from-lang"></select>
+            </div>
+            <div class="exchange">
+                <i class="fa-solid fa-arrow-right-arrow-left"></i>
+            </div>
+            <div class="to-lang">
+                <select id="to-lang"></select>
+                <div class="icons">
+                    <i id="to-volume" class="fa-solid fa-volume-high"></i>
+                    <i id="to-copy" class="fa-solid fa-copy"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-controls">
+            <textarea id="from-text" placeholder="Enter the text to be translated"></textarea>
+            <textarea id="to-text" placeholder="Translated text" disabled></textarea>
+        </div>
+    </div>
+    <button id="btnTranslate">Translate</button>
+</div>
+
+<div id="snackbar"></div>
+
+<script src="languages.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #1897Bf;
+}
+
+.container {
+    width: 800px;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.box {
+    border: 1px solid #7F8487;
+    border-radius: 5px;
+}
+
+.controls {
+    padding: 12px 15px;
+}
+
+.controls, .controls > div, .controls div.icons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.controls, .controls > div, .controls div.icons {
+    gap: 10px;
+}
+
+.controls div.icons i {
+    color: #7F8487;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.controls .exchange i {
+    cursor: pointer;
+}
+
+.text-controls {
+    display: flex;
+    border-top: 1px solid #7F8487;
+}
+
+.text-controls textarea {
+    width: 100%;
+    height: 250px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    background: none;
+    padding: 10px 15px;
+    resize: none;
+}
+
+.text-controls textarea#to-text {
+    border-left: 1px solid #7F8487;
+}
+
+button {
+    background-color: #555;
+    color: #fff;
+    border: 2px solid #555;
+    padding: 10px 20px;
+    width: 100%;
+    margin-top: 5px;
+    font-size: 16px;
+    transition: all .4s;
+    cursor: pointer;
+}
+
+button[disabled] {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+button:hover {
+    background-color: #fff;
+    color: #555;
+}
+
+button:hover > .lds-dual-ring:after {
+    border-color: #555 transparent #555 transparent;
+}
+
+@media only screen and (max-width: 600px){
+    .controls > div {
+        flex-direction: column;
+    }
+
+    .controls > div.from-lang {
+        align-items: flex-start;
+    }
+
+    .controls div.to-lang {
+        align-items: flex-end;
+    }
+
+    .controls div.to-lang > select#to-lang {
+        order: 2;
+    }
+
+    .controls div.to-lang > div.icons {
+        order: 1;
+    }
+
+    .text-controls {
+        flex-direction: column;
+    }
+
+    .text-controls textarea {
+        height: 125px;
+    }
+
+    .text-controls textarea#to-text {
+        border-left: none;
+        border-top: 1px solid #7F8487;
+    }
+}
